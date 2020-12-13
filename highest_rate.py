@@ -18,6 +18,9 @@ class Arm:
             op = list(self.opponent_actions),
             ))
     def simple_score_from_my_pulls(self):
+        # this is really naive.
+        # Maybe better to 'discount' the old successes, as we know the arms
+        # loses 3% each time it's pull (50%-to-47%, or 50%-to-48.5%, I'm not sure)
         how_often_have_I_pulled_this = len(self.my_actions_and_rewards)
         reward_I_got_from_this = sum(self.my_actions_and_rewards.values())
         return how_often_have_I_pulled_this, reward_I_got_from_this
