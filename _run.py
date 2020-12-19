@@ -10,7 +10,7 @@ env = make("mab", debug=True)
 
 # Run two of our agents against each other.
 # Or you can just use "random" to play against a bot that just selects randomly
-agent_name1 = './highest_rate.py'
+agent_name1 = './thompson.py'
 agent_name2 = './basic_v2.py'
 steps = env.run([agent_name1, agent_name2])
 
